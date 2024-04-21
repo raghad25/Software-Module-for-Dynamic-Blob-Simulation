@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%; /* Use percentage for responsive width */
+  max-width: 900px; /* Maximum width of the section */
+  height: 80vh; /* Responsive height based on viewport height */
+  margin: auto; /* Center section horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* // background: rgba(241, 237, 237, 0.9); */
+}
+
+.blob {
+  flex: 0 0 auto;
+  width: 30vw; /* Use viewport width for responsive size */
+  max-width: 200px; 
+  height: auto;
+  transition: transform 0.1s ease;
+  border-radius: 50%; /* Make it round */
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%; 
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .blob {
+    width: 40vw; /* Use viewport width for responsive size */
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .blob {
+    width: 80vw; /* Use viewport width for responsive size */
+    margin: 10px auto; 
+  }
+}
